@@ -5,24 +5,18 @@
         <VaButton preset="secondary" color="textPrimary">
           <span class="profile-dropdown__anchor min-w-max">
             <slot />
-            <VaAvatar :size="32" color="warning"> 😍 </VaAvatar>
+            <VaAvatar :size="32" color="success"> 👨‍🌾 </VaAvatar>
           </span>
         </VaButton>
       </template>
-      <VaDropdownContent
-        class="profile-dropdown__content md:w-60 px-0 py-4 w-full"
-        :style="{ '--hover-color': hoverColor }"
-      >
+      <VaDropdownContent class="profile-dropdown__content md:w-60 px-0 py-4 w-full"
+        :style="{ '--hover-color': hoverColor }">
         <VaList v-for="group in options" :key="group.name">
           <header v-if="group.name" class="uppercase text-[var(--va-secondary)] opacity-80 font-bold text-xs px-4">
             {{ t(`user.${group.name}`) }}
           </header>
-          <VaListItem
-            v-for="item in group.list"
-            :key="item.name"
-            class="menu-item px-4 text-base cursor-pointer h-8"
-            v-bind="resolveLinkAttribute(item)"
-          >
+          <VaListItem v-for="item in group.list" :key="item.name" class="menu-item px-4 text-base cursor-pointer h-8"
+            v-bind="resolveLinkAttribute(item)">
             <VaIcon :name="item.icon" class="pr-1" color="secondary" />
             {{ t(`user.${item.name}`) }}
           </VaListItem>
