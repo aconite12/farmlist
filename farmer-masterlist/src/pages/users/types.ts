@@ -1,3 +1,4 @@
+// types.ts
 export type UserRole = 'admin' | 'user' | 'owner'
 
 export type UUID = `${string}-${string}-${string}-${string}-${string}`

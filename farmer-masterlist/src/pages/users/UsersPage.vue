@@ -1,3 +1,4 @@
+<!-- UserPage.vue -->
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
 import UsersTable from './widgets/UsersTable.vue'
